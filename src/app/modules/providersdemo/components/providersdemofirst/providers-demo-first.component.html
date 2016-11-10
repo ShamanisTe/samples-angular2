@@ -1,0 +1,17 @@
+<div>
+    <p>FIRST</p>
+    <div id="logger">
+        <p>logs</p>
+        <ul>
+            <li *ngFor="let log of logs">
+                {{log}}
+            </li>
+        </ul>
+    </div>
+    <p>API KEY = {{ apiKey }}</p>
+    <ul>
+        <li *ngFor="let comment of comments">
+            {{comment}}
+        </li>
+    </ul>
+</div>

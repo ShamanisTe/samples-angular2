@@ -1,0 +1,35 @@
+<div>
+    <h4>todos</h4>
+    <ul>
+        <li>Mettre un router pour avoir plusieurs pages</li>
+        <li>Avoir plus de exemples Rx sur l'http</li>
+    </ul>
+</div>
+<hr>
+
+<h3>httpreq component</h3>
+
+<p *ngIf="errorMessage">
+    {{errorMessage}}
+</p>
+
+<pre>
+   div class="post" *ngFor="let post of posts | slice:0:5"
+        post.title - post.body from post.userId
+   /div
+</pre>
+<div class="post" *ngFor="let post of posts | slice:0:5">
+    {{post.title}} - {{post.body}} from {{post.userId}}
+</div>
+
+<hr>
+
+<pre>
+   div class="post" *ngFor="let post of postsUser | async | slice:0:5"
+        post.title - post.body from post.userId
+   /div
+</pre>
+<div class="post" *ngFor="let post of postsUser | async | slice:0:5">
+    {{post.title}} - {{post.body}} from {{post.userId}}
+</div>
+<hr>

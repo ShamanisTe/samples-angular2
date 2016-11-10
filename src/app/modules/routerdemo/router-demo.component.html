@@ -1,0 +1,24 @@
+<div>
+    <h4>todos</h4>
+    <ul>
+        <li>Ajouter des routes avec params / querystring</li>
+    </ul>
+</div>
+<hr>
+
+<p>
+    Router demo
+</p>
+<div>
+    <button
+            [ngClass]="{isAdmin: isAdmin, isNotAdmin: !isAdmin}"
+            (click)="onIsAdminClick()">Change admin state: {{isAdmin}}
+    </button>
+    <div>
+        <a [routerLink]="['/router/user']">User route</a>
+        <a [routerLink]="['/router/admin']">Admin route</a>
+    </div>
+</div>
+<div class="wrapper">
+    <router-outlet></router-outlet>
+</div>

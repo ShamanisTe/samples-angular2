@@ -1,0 +1,24 @@
+:host {
+    background: red;
+}
+
+.todo {
+    border-bottom: 1px dashed grey;
+}
+
+.todo-content {
+    transition: color 100ms linear;
+    display: inline-block;
+    width: calc(100% - 100px);
+    padding: 5px;
+}
+
+.todo.important .todo-content {
+    color: red;
+}
+
+.todo.done .todo-content {
+    font-style: italic;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+}

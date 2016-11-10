@@ -1,0 +1,23 @@
+<form
+        (ngSubmit)="onTodoFormSubmit($event)"
+        #todoForm="ngForm">
+    <div>
+        <label for="todo-task">Tâche</label>
+        <input
+                #todoTaskModel="ngModel"
+                #todoTaskElement
+                type="text"
+                id="todo-task"
+                name="todo-task"
+                required
+                minlength="3"
+                [(ngModel)]="todo.task"/>
+        <!-- <br>classname from input: {{todoTaskElement.className}} -->
+        <div [hidden]="todoTaskModel.valid || todoTaskModel.pristine || !todoTaskModel.errors.minlength"
+             class="alert alert-danger">
+            Une tâche doit avoir au moins 3 caractères
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="!todoForm.form.valid">Ajouter</button>
+</form>

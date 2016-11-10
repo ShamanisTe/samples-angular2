@@ -1,0 +1,13 @@
+<p>Todos list</p>
+
+<todos-todo-form
+        (todoFormSubmit)="onTodoFormSubmit($event)">
+</todos-todo-form>
+
+<hr>
+
+<todos-todo *ngFor="let t of todos"
+            [todo]="t"
+            (todoChange)="onTodoChange($event)"
+            (todoDelete)="onTodoDelete($event)">
+</todos-todo>

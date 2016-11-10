@@ -1,0 +1,6 @@
+<div *ngIf="todo" class="todo" [ngClass]="{important: todo.isImportant, done: todo.isDone}">
+    <div class="todo-content" contenteditable="true" [textContent]="todo.task" (input)="onTaskInput($event)"></div>
+    <input type="checkbox" [ngModel]="todo.isDone" (ngModelChange)="onCheckboxChange()"/>
+    <span data-pointer (click)="onImportantClick()">[!]</span>
+    <span data-pointer (click)="onDeleteClick()">[X]</span>
+</div>

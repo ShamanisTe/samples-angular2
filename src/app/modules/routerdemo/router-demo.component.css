@@ -1,0 +1,11 @@
+button.isAdmin {
+    border: 2px solid green;
+}
+
+button.isNotAdmin {
+    border: 2px solid red;
+}
+
+button {
+    outline: none;
+}
