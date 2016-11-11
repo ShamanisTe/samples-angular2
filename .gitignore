@@ -195,3 +195,6 @@ npm-debug.log
 # Bundles
 bundle.js
 bundle.js.map
+
+# dist
+dist
