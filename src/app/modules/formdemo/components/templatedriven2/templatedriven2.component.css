@@ -1,0 +1,11 @@
+:host{
+    padding:15px;
+}
+textarea{
+    resize: none;
+    height:50px;
+}
+.error-msg{
+    color:red;
+    margin-bottom:10px;
+}

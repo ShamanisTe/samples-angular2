@@ -19,18 +19,18 @@ export interface TodoFormSubmitEventArgs {
   styleUrls:   ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-  
+
   @Output() todoFormSubmit: EventEmitter<TodoFormSubmitEventArgs> = new EventEmitter<TodoFormSubmitEventArgs>();
   @ViewChild('todoForm') todoForm: NgForm;
   todo: Todo;
-  
+
   constructor() {
   }
-  
+
   ngOnInit() {
     this.initTodoForm();
   }
-  
+
   /**
    * init todo for form
    * 
@@ -38,9 +38,9 @@ export class TodoFormComponent implements OnInit {
    * @memberOf TodoFormComponent
    */
   initTodoForm() {
-    this.todo = new Todo(Math.random(), "");
+    this.todo = new Todo(Math.random(), '');
   }
-  
+
   /**
    * reinit todo for form and notify parent component
    * 
@@ -49,13 +49,13 @@ export class TodoFormComponent implements OnInit {
    * @memberOf TodoFormComponent
    */
   onTodoFormSubmit( event ) {
-    console.log("onTaskFormSubmit=", event);
+    console.log('onTaskFormSubmit=', event);
     console.log(this.todoForm);
-    
+
     this.todoFormSubmit.emit({
       todo: this.todo
     });
-    
+
     this.initTodoForm();
   }
 }

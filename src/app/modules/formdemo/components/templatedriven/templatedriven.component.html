@@ -1,0 +1,54 @@
+<form 
+  name="templatedrivenform"
+  #templatedrivenform="ngForm"
+  (ngSubmit)="onSubmit()">
+
+  <div>
+    <label>firstname*</label>
+    <input 
+      type="text"
+      id="firstname"
+      name="firstname"
+      required
+      minlength="4" 
+      maxlength="56"
+      [(ngModel)]="user.firstname"
+      #firstname="ngModel" />
+
+    <div *ngIf="firstname.errors  && (firstname.dirty || firstname.touched)" class="error-msg">
+      <div [hidden]="!firstname.errors.required">
+        firstname is required
+      </div>
+      <div [hidden]="!firstname.errors.minlength">
+        firstname must be at least 4 characters long.
+      </div>
+      <div [hidden]="!firstname.errors.maxlength">
+        firstname cannot be more than 56 characters long.
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <label>lastname*</label>
+    <input 
+      type="text"
+      id="lastname"
+      name="lastname"
+      required
+      [(ngModel)]="user.lastname"
+      #lastname="ngModel" />
+      
+    <div *ngIf="lastname.errors  && (lastname.dirty || lastname.touched)" class="error-msg">
+      <div [hidden]="!lastname.errors.required">
+        lastname is required
+      </div>
+    </div>  
+
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="!templatedrivenform.form.valid">
+    send form
+  </button>
+</form>

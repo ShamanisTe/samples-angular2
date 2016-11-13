@@ -1,0 +1,43 @@
+<form 
+  name="templatedrivenform"
+  #templatedrivenform="ngForm"
+  (ngSubmit)="onSubmit()">
+
+  <div>
+    <label>firstname*</label>
+    <input 
+      type="text"
+      id="firstname"
+      name="firstname"
+      required
+      minlength="4" 
+      maxlength="56"
+      [(ngModel)]="user.firstname"
+      #firstname="ngModel" />
+
+    <div *ngIf="templatedrivenformErrors.firstname" class="error-msg">
+          {{ templatedrivenformErrors.firstname }}
+    </div>
+  </div>
+  
+  <div>
+    <label>lastname*</label>
+    <input 
+      type="text"
+      id="lastname"
+      name="lastname"
+      required
+      [(ngModel)]="user.lastname"
+      #lastname="ngModel" />
+      
+    <div *ngIf="templatedrivenformErrors.lastname" class="error-msg">
+          {{ templatedrivenformErrors.lastname }}
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="!templatedrivenform.form.valid">
+    send form
+  </button>
+</form>
