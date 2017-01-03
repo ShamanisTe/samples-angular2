@@ -1,0 +1,80 @@
+<form *ngIf="selfFormGroup"
+      name="modeldrivenform"
+      [formGroup]="selfFormGroup"
+      (ngSubmit)="onSubmit(selfFormGroup.value)">
+
+    <div>
+        <label>firstname*</label>
+        <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                formControlName="firstname"/>
+
+        <template ngFor let-validator [ngForOf]="templatedrivenformValidationMessages['firstname']">
+            <div
+                    *ngIf="selfFormGroup.controls['firstname'].hasError(validator.validator) && selfFormGroup.controls['firstname'].touched"
+                    class="error-msg">
+                {{ validator.msg }}
+            </div>
+        </template>
+
+
+    </div>
+
+    <div>
+        <label>lastname*</label>
+        <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                [formControl]="selfFormGroup.controls['lastname']"/>
+
+
+        <div
+                *ngIf="selfFormGroup.controls['lastname'].hasError('required') && selfFormGroup.controls['lastname'].touched"
+                class="error-msg">
+            Lastname is required
+        </div>
+        <div
+                *ngIf="selfFormGroup.controls['lastname'].hasError('customValidator') && selfFormGroup.controls['lastname'].touched"
+                class="error-msg">
+            Lastname customValidator error. Must contains "last"
+        </div>
+
+    </div>
+
+
+    <div formGroupName="pwd">
+        <div>
+            <label>Password*</label>
+            <input
+                    type="text"
+                    id="password"
+                    name="password"
+                    formControlName="password"/>
+        </div>
+        <div>
+            <label>Password confirm*</label>
+            <input
+                    type="text"
+                    id="passwordconfirm"
+                    name="passwordconfirm"
+                    formControlName="passwordconfirm"/>
+        </div>
+
+        <div
+                *ngIf="!selfFormGroup.controls['pwd'].valid"
+                class="error-msg">
+            password not same
+        </div>
+    </div>
+
+
+
+    <button
+            [disabled]="!selfFormGroup.valid"
+            type="submit">
+        send form
+    </button>
+</form>

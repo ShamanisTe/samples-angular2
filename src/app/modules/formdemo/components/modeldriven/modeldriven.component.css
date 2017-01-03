@@ -1,0 +1,7 @@
+:host{
+    padding:15px;
+}
+.error-msg{
+    color:red;
+    margin-bottom:10px;
+}

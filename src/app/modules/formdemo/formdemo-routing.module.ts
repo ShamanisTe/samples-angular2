@@ -4,6 +4,7 @@ import { FormdemoComponent } from './formdemo.component';
 
 import { TemplatedrivenComponent } from './components/templatedriven/templatedriven.component';
 import { Templatedriven2Component } from './components/templatedriven2/templatedriven2.component';
+import { ModeldrivenComponent } from './components/modeldriven/modeldriven.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path:      'templatedriven2',
         component: Templatedriven2Component
+      },
+      {
+        path:      'modeldriven',
+        component: ModeldrivenComponent
       }
     ]
   },
