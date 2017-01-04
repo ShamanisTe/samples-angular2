@@ -1,0 +1,25 @@
+<div i18n>Hello everybody from i18n!</div>
+
+
+<span i18n="i want to eat a poney|this is a state of my body">I'm hungry</span><br>
+
+<ng-container i18n>no HTML tag</ng-container><br>
+
+<div i18n>params with nbPersons : {{ nbPersons }}</div>
+
+<div>
+    <!-- Not working with XLF file, need XMB
+  <span i18n>
+    {
+      nbPersons,
+          plural,
+          =0 { no person }
+          =1 { only one person}
+          =2 { two persons }
+          other { too much: ({{nbPersons}}) }
+    }
+  </span>
+  -->
+
+  <p>This sentence have no translation</p>
+</div>

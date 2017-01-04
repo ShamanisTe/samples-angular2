@@ -21,12 +21,15 @@ export const routes: Routes = [
 
   // lazy loading for TodosModule
   {path: 'todos', loadChildren: 'app/modules/todos/todos.module#TodosModule'},
-
+  
   // lazy loading for RouterDemoModule
   {path: 'router', loadChildren: 'app/modules/routerdemo/router-demo.module#RouterDemoModule'},
 
   // lazy loading for FormdemoModule
   {path: 'form', loadChildren: 'app/modules/formdemo/formdemo.module#FormdemoModule'},
+  
+  // lazy loading for FormdemoModule
+  {path: 'i18n', loadChildren: 'app/modules/i18ndemo/i18ndemo.module#I18ndemoModule'},
 ];
 
 @NgModule({

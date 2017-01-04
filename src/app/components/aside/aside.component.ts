@@ -16,7 +16,7 @@ export class AsideComponent implements OnInit {
     {text: 'DI - providers', link: '/providers'},
     {text: 'Form', link: '/form'},
     {text: 'Animations', link: '/'},
-    {text: 'i18n', link: '/'}
+    {text: 'i18n', link: '/i18n'}
   ];
 
   constructor() {
