@@ -1,0 +1,13 @@
+<h2>nocombe</h2>
+<div translate>helloworld</div>
+<span translate>helloworld</span><br>
+
+<span>{{ msgTranslate }}</span><br>
+
+<div [innerHTML]="'htmlContent' | translate"></div>
+
+<div translate [translateParams]="{nbPers: nbPersons}">params.nbpersons</div>
+
+<div>
+  <p>This sentence have no translation</p>
+</div>
