@@ -1,0 +1,9 @@
+{
+  "helloworld": "bonjour à tous !",
+  "htmlContent": "<br><strong>gras</strong><br><div>contenu html</div><br>",
+  "params": {
+    "nbpersons": "il y a {{nbPers}} dans cette application"
+  },
+  "paramsnbpersons":"il y a {{nbPers}} dans cette application",
+  "information": "Information récupéré"
+}
