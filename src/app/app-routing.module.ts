@@ -20,16 +20,16 @@ export const routes: Routes = [
   {path: 'providers', component: ProvidersdemoComponent},
 
   // lazy loading for TodosModule
-  {path: 'todos', loadChildren: 'app/modules/todos/todos.module#TodosModule'},
+  {path: 'todos', loadChildren: './modules/todos/todos.module#TodosModule'},
   
   // lazy loading for RouterDemoModule
-  {path: 'router', loadChildren: 'app/modules/routerdemo/router-demo.module#RouterDemoModule'},
+  {path: 'router', loadChildren: './modules/routerdemo/router-demo.module#RouterDemoModule'},
 
   // lazy loading for FormdemoModule
-  {path: 'form', loadChildren: 'app/modules/formdemo/formdemo.module#FormdemoModule'},
+  {path: 'form', loadChildren: './modules/formdemo/formdemo.module#FormdemoModule'},
   
   // lazy loading for FormdemoModule
-  {path: 'i18n', loadChildren: 'app/modules/i18ndemo/i18ndemo.module#I18ndemoModule'},
+  {path: 'i18n', loadChildren: './modules/i18ndemo/i18ndemo.module#I18ndemoModule'},
 ];
 
 @NgModule({
