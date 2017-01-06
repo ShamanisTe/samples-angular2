@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class I18ndemoComponent implements OnInit {
   
-  nbPersons:number = 0;
+  
+  
   constructor() { }
 
   ngOnInit() {
-    this.nbPersons = Math.floor(Math.random() * 5);
+
   }
 
 }
