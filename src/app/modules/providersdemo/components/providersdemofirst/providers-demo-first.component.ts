@@ -18,13 +18,13 @@ export class ProvidersDemoFirstComponent implements OnInit {
   constructor(
                private localService: LocalService,
                private commentsService: CommentsService,
-               @Inject('TITLE') private title: string,
-               @Inject(MESSAGE) private msgOpaqueToken: MsgOpaqueToken ) {
+               @Inject('TITLE') private title: string
+               /*@Inject(MESSAGE) private msgOpaqueToken: MsgOpaqueToken*/ ) {
     
     
     this.logs.push("value from localService=" + localService.getValue());
     this.logs.push("value from TITLE=" + title);
-    this.logs.push("value from OpaqueToken MESSAGE=" + msgOpaqueToken.msg);
+    // this.logs.push("value from OpaqueToken MESSAGE=" + msgOpaqueToken.msg);
 
     this.logs.push("You can use CommentsNewService by uncomment it from providers-demo.module.ts");
   }

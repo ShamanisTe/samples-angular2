@@ -15,7 +15,7 @@ export class ProvidersdemosecondComponent implements OnInit {
 
   constructor(
           private config: ConfigApp,
-          private minimalCommentService: MinimalCommentsService,
+          private minimalCommentService: MinimalCommentsService
               // import LocalService should be in error because, it is provide in "importservicecomponent"
               //             private localService: LocalService
   ) { }
@@ -32,13 +32,13 @@ export class ProvidersdemosecondComponent implements OnInit {
     } else {
       this.logs.push("minimalCommentService.getComments() KO");
     }
-    
+    /*
     if (this.minimalCommentService.getAPIKEY) {
       this.logs.push("minimalCommentService.getAPIKEY() OK");
     } else {
       this.logs.push("minimalCommentService.getAPIKEY() KO");
     }
-    
+    */
     this.logs.push("test import LocalService, should be crash if uncomment");
   }
 
