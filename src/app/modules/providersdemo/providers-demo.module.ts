@@ -32,8 +32,9 @@ import { ProvidersdemosecondComponent } from './components/providersdemosecond/p
     // Custom provide by string naming and string value
     {provide: 'TITLE', useValue: 'some value for title'},
     
+    // TODO not working with ng-xi18n
     // Custom provide by OpaqueToken and string value
-    {provide: MESSAGE, useValue: new MsgOpaqueToken()},
+    //{provide: MESSAGE, useValue: new MsgOpaqueToken()},
     
     // provide by ES6 class with value
     {provide: ConfigApp, useValue: true ? prodConfig : devConfig},
@@ -46,7 +47,7 @@ import { ProvidersdemosecondComponent } from './components/providersdemosecond/p
 })
 export class ProvidersDemoModule {
   
-  constructor() {}
+  
   
 }
 
